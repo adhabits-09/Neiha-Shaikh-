@@ -98,13 +98,11 @@
         .stat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover);}
         .counter{font-size:2rem;font-weight:800;color:var(--primary);}
 
-        /* REEL-SIZE CARDS */
+        /* REEL-SIZE + ON-PAGE PLAY */
         .reel-track{display:flex;gap:15px;overflow-x:auto;padding-bottom:8px;}
-        .reel-card{flex:0 0 320px;height:570px;border-radius:15px;overflow:hidden;box-shadow:var(--shadow);cursor:pointer;position:relative;background:#000;}
-        .reel-thumb{width:100%;height:100%;object-fit:cover;}
-        .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:60px;height:60px;background:rgba(255,255,255,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:var(--primary);}
-        .reel-card:hover .play-btn{background:var(--white);}
-
+        .reel-card{flex:0 0 320px;height:570px;border-radius:15px;overflow:hidden;box-shadow:var(--shadow);background:#000;}
+        .reel-player{width:100%;height:100%;border:0;border-radius:15px;}
+        
         .step-card{background: var(--white); border-radius:15px;padding:1.5rem;box-shadow:var(--shadow);transition:all .4s;height:100%;}
         .step-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover);}
         .step-number{width:50px;height:50px;background:linear-gradient(135deg,var(--primary),var(--light));color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;flex-shrink:0;}
@@ -201,32 +199,27 @@
     </div>
 </section>
 
-<!-- ===== REEL-SIZE + CLICK TO PLAY FULL-SCREEN ===== -->
+<!-- ===== REEL-SIZE + ON-PAGE FULL-SCREEN PLAY ===== -->
 <section class="py-5" style="background: var(--white);">
     <div class="container">
         <h2 class="text-center display-5 fw-bold mb-3" style="color:var(--primary);">✨ Real Success Stories</h2>
         <p class="text-center text-muted mb-4">100% real feedback from women in our community</p>
         <div class="reel-track">
-            <!-- 5 Reels (Click → Full-Screen YouTube Short) -->
-            <div class="reel-card shine-effect" onclick="window.open('https://youtube.com/shorts/prtaArdWN2M?si=kbe9PPV4d39-OgjG','_blank')">
-                <img src="https://img.youtube.com/vi/prtaArdWN2M/0.jpg" class="reel-thumb" alt="Story 1" loading="lazy">
-                <div class="play-btn">▶</div>
+            <!-- 5 YouTube Shorts – click → full-screen on page -->
+            <div class="reel-card shine-effect">
+                <iframe class="reel-player" src="https://www.youtube.com/embed/prtaArdWN2M?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0" allowfullscreen></iframe>
             </div>
-            <div class="reel-card shine-effect" onclick="window.open('https://youtube.com/shorts/lBVynqXZHMs?si=T-Yr70XX74YAj5sC','_blank')">
-                <img src="https://img.youtube.com/vi/lBVynqXZHMs/0.jpg" class="reel-thumb" alt="Story 2" loading="lazy">
-                <div class="play-btn">▶</div>
+            <div class="reel-card shine-effect">
+                <iframe class="reel-player" src="https://www.youtube.com/embed/lBVynqXZHMs?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0" allowfullscreen></iframe>
             </div>
-            <div class="reel-card shine-effect" onclick="window.open('https://youtube.com/shorts/QprrCX8Bj8Q?si=TLkQub7xQOcmQjtp','_blank')">
-                <img src="https://img.youtube.com/vi/QprrCX8Bj8Q/0.jpg" class="reel-thumb" alt="Story 3" loading="lazy">
-                <div class="play-btn">▶</div>
+            <div class="reel-card shine-effect">
+                <iframe class="reel-player" src="https://www.youtube.com/embed/QprrCX8Bj8Q?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0" allowfullscreen></iframe>
             </div>
-            <div class="reel-card shine-effect" onclick="window.open('https://youtube.com/shorts/bdnVQ-YVF8g?si=S7dLVy6y1eP8TXjq','_blank')">
-                <img src="https://img.youtube.com/vi/bdnVQ-YVF8g/0.jpg" class="reel-thumb" alt="Story 4" loading="lazy">
-                <div class="play-btn">▶</div>
+            <div class="reel-card shine-effect">
+                <iframe class="reel-player" src="https://www.youtube.com/embed/bdnVQ-YVF8g?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0" allowfullscreen></iframe>
             </div>
-            <div class="reel-card shine-effect" onclick="window.open('https://youtube.com/shorts/qThJX6byIIM?si=K9QGSa52rIRWCJxl','_blank')">
-                <img src="https://img.youtube.com/vi/qThJX6byIIM/0.jpg" class="reel-thumb" alt="Story 5" loading="lazy">
-                <div class="play-btn">▶</div>
+            <div class="reel-card shine-effect">
+                <iframe class="reel-player" src="https://www.youtube.com/embed/qThJX6byIIM?autoplay=0&mute=0&controls=1&modestbranding=1&rel=0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
