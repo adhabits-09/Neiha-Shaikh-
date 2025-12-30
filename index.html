@@ -125,11 +125,11 @@
         .stat-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover);}
         .counter{font-size:2rem;font-weight:800;color:var(--primary);}
 
-        /* BIG + MANUAL-SCROLL FEEDBACK */
-        .feedback-viewport{overflow-x:auto;overflow-y:hidden;margin:1.5rem 0;cursor:grab;}
-        .feedback-track{display:flex;gap:20px;width:max-content;padding-bottom:8px;}
-        .feedback-item{flex-shrink:0;width:550px;height:310px;border-radius:15px;overflow:hidden;box-shadow:var(--shadow);background:#000;}
-        .feedback-item iframe{width:100%;height:100%;display:block;border:0;}
+        /* REEL-SIZE + MANUAL-PLAY FEEDBACK */
+        .feedback-viewport{overflow-x:auto;overflow-y:hidden;margin:1.5rem 0;cursor:grab;padding-bottom:8px;}
+        .feedback-track{display:flex;gap:20px;width:max-content;}
+        .feedback-item{flex-shrink:0;width:320px;height:570px;border-radius:15px;overflow:hidden;box-shadow:var(--shadow);background:#000;}
+        video{width:100%;height:100%;display:block;object-fit:cover;border-radius:15px;}
 
         .step-card{background: var(--white); border-radius:15px;padding:1.5rem;box-shadow:var(--shadow);transition:all .4s;height:100%;}
         .step-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover);}
@@ -152,7 +152,7 @@
         @media(max-width:768px){
             section{padding:40px 0;}
             .hero-section{padding:50px 0 30px;}
-            .feedback-item{width:85vw;height:48vw;}
+            .feedback-item{width:85vw;height:152vw;}
             .counter{font-size:1.6rem;}
             .wa-btn{width:100%;justify-content:center;}
             h1.display-3{font-size:2rem;}
@@ -229,44 +229,74 @@
     </div>
 </section>
 
-<!-- ===== BIG + MANUAL-SCROLL FEEDBACK ===== -->
+<!-- ===== REEL-SIZE + MANUAL-PLAY FEEDBACK ===== -->
 <section class="py-5" style="background: var(--white);">
     <div class="container">
         <h2 class="text-center display-5 fw-bold mb-3" style="color:var(--primary);">✨ Real Success Stories</h2>
         <p class="text-center text-muted mb-4">100% real feedback from women in our community</p>
         <div class="feedback-viewport">
             <div class="feedback-track">
-                <!-- 5 YouTube Shorts (autoplay loop muted) + duplicate -->
+                <!-- 5 YouTube Shorts (NO autoplay, voice ON) + duplicate -->
                 <div class="feedback-item">
-                    <iframe src="https://www.youtube.com/embed/prtaArdWN2M?autoplay=1&loop=1&mute=1&playlist=prtaArdWN2M" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="https://img.youtube.com/vi/prtaArdWN2M/0.jpg">
+                        <source src="https://www.youtube.com/embed/prtaArdWN2M" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="feedback-item">
-                    <iframe src="https://www.youtube.com/embed/lBVynqXZHMs?autoplay=1&loop=1&mute=1&playlist=lBVynqXZHMs" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="https://img.youtube.com/vi/lBVynqXZHMs/0.jpg">
+                        <source src="https://www.youtube.com/embed/lBVynqXZHMs" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="feedback-item">
-                    <iframe src="https://www.youtube.com/embed/QprrCX8Bj8Q?autoplay=1&loop=1&mute=1&playlist=QprrCX8Bj8Q" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="https://img.youtube.com/vi/QprrCX8Bj8Q/0.jpg">
+                        <source src="https://www.youtube.com/embed/QprrCX8Bj8Q" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="feedback-item">
-                    <iframe src="https://www.youtube.com/embed/bdnVQ-YVF8g?autoplay=1&loop=1&mute=1&playlist=bdnVQ-YVF8g" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="https://img.youtube.com/vi/bdnVQ-YVF8g/0.jpg">
+                        <source src="https://www.youtube.com/embed/bdnVQ-YVF8g" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="feedback-item">
-                    <iframe src="https://www.youtube.com/embed/qThJX6byIIM?autoplay=1&loop=1&mute=1&playlist=qThJX6byIIM" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="https://img.youtube.com/vi/qThJX6byIIM/0.jpg">
+                        <source src="https://www.youtube.com/embed/qThJX6byIIM" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <!-- duplicate -->
                 <div class="feedback-item">
-                    <iframe src="https://www.youtube.com/embed/prtaArdWN2M?autoplay=1&loop=1&mute=1&playlist=prtaArdWN2M" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="https://img.youtube.com/vi/prtaArdWN2M/0.jpg">
+                        <source src="https://www.youtube.com/embed/prtaArdWN2M" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="feedback-item">
-                    <iframe src="https://www.youtube.com/embed/lBVynqXZHMs?autoplay=1&loop=1&mute=1&playlist=lBVynqXZHMs" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="https://img.youtube.com/vi/lBVynqXZHMs/0.jpg">
+                        <source src="https://www.youtube.com/embed/lBVynqXZHMs" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="feedback-item">
-                    <iframe src="https://www.youtube.com/embed/QprrCX8Bj8Q?autoplay=1&loop=1&mute=1&playlist=QprrCX8Bj8Q" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="https://img.youtube.com/vi/QprrCX8Bj8Q/0.jpg">
+                        <source src="https://www.youtube.com/embed/QprrCX8Bj8Q" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="feedback-item">
-                    <iframe src="https://www.youtube.com/embed/bdnVQ-YVF8g?autoplay=1&loop=1&mute=1&playlist=bdnVQ-YVF8g" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="https://img.youtube.com/vi/bdnVQ-YVF8g/0.jpg">
+                        <source src="https://www.youtube.com/embed/bdnVQ-YVF8g" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="feedback-item">
-                    <iframe src="https://www.youtube.com/embed/qThJX6byIIM?autoplay=1&loop=1&mute=1&playlist=qThJX6byIIM" allowfullscreen loading="lazy"></iframe>
+                    <video controls preload="metadata" poster="https://img.youtube.com/vi/qThJX6byIIM/0.jpg">
+                        <source src="https://www.youtube.com/embed/qThJX6byIIM" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
