@@ -8,7 +8,7 @@
     <!-- SEO -->
     <meta name="description" content="Join 10K+ women learning in-demand skills and earning ₹50K-₹1L monthly. Start today!">
     <meta property="og:image" content="https://i.ibb.co/8QJtktT/neisha-shaikh.jpg">
-    <meta name="theme-color" content="#2E5E99">
+    <meta name="theme-color" content="#25D366">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,6 +42,8 @@
             --shadow-hover: 0 10px 30px rgba(46,94,153,.25);
             --glow: 0 0 25px rgba(123,164,208,.5);
             --glow-intense: 0 0 40px rgba(123,164,208,.7);
+            --wa-green: #25D366;
+            --wa-dark:  #128C7E;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -56,24 +58,25 @@
         .glow-pulse { animation: pulseGlow 2.5s infinite; }
 
         @keyframes pulseGlow {
-            0%,100%{box-shadow:0 0 20px rgba(123,164,208,.4);}
-            50%{box-shadow:0 0 40px rgba(123,164,208,.8);}
+            0%,100%{box-shadow:0 0 20px rgba(37,211,102,.4);}
+            50%{box-shadow:0 0 40px rgba(37,211,102,.8);}
         }
 
-        .wa-btn{
-            background:linear-gradient(135deg,var(--primary),var(--light));
-            color:var(--white);
+        /* ONLY form-opening buttons get WhatsApp colours */
+        .open-any{
+            background:linear-gradient(135deg,var(--wa-green),var(--wa-dark)) !important;
+            color:var(--white) !important;
             padding:.85rem 1.8rem;border-radius:50px;font-weight:800;border:none;
             display:inline-flex;align-items:center;gap:.5rem;
-            box-shadow:0 8px 20px rgba(46,94,153,.3);
+            box-shadow:0 8px 20px rgba(37,211,102,.3);
             cursor:pointer;transition:all .3s;text-decoration:none;font-size:1rem;white-space:nowrap;
             position:relative;overflow:hidden;
         }
-        .wa-btn:hover{
+        .open-any:hover{
             transform:translateY(-3px) scale(1.03);
-            box-shadow:var(--glow-intense),0 15px 30px rgba(46,94,153,.4);
+            box-shadow:0 0 40px rgba(37,211,102,.7),0 15px 30px rgba(37,211,102,.4);
         }
-        .wa-btn:active{transform:translateY(0) scale(.98);}
+        .open-any:active{transform:translateY(0) scale(.98);}
 
         section{padding:50px 0;position:relative;}
         .hero-section{
@@ -114,18 +117,18 @@
 
         .form-backdrop,.privacy-modal{position:fixed;inset:0;background:rgba(13,36,64,.8);backdrop-filter:blur(8px);z-index:9999;opacity:0;visibility:hidden;transition:all .4s;}
         .form-backdrop.show,.privacy-modal.show{opacity:1;visibility:visible;}
-        #formContainer,#privacyContent{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);z-index:10000;max-width:500px;width:90%;max-height:85vh;opacity:0;visibility:hidden;transition:all .4s;background:var(--white);border:1px solid var(--primary);border-radius:15px;box-shadow:var(--glow-intense);}
+        #formContainer,#privacyContent{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(.9);z-index:10000;max-width:500px;width:90%;max-height:85vh;opacity:0;visibility:hidden;transition:all .4s;background:var(--white);border:1px solid var(--wa-green);border-radius:15px;box-shadow:0 0 40px rgba(37,211,102,.3);}
         #formContainer.show,#privacyContent.show{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1);}
-        .form-card{box-shadow:0 0 40px rgba(46,94,153,.3);border:1px solid var(--primary);}
+        .form-card{box-shadow:0 0 40px rgba(37,211,102,.3);border:1px solid var(--wa-green);}
         .form-control,.form-select{background: var(--lightest); border:2px solid var(--light);color:var(--darkest);border-radius:8px;padding:.6rem .9rem;transition:all .3s;}
-        .form-control:focus,.form-select:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(46,94,153,.15);}
+        .form-control:focus,.form-select:focus{border-color:var(--wa-green);box-shadow:0 0 0 4px rgba(37,211,102,.15);}
 
         @media(max-width:768px){
             section{padding:40px 0;}
             .hero-section{padding:50px 0 30px;}
             .reel-card{flex:0 0 85vw;height:152vw;}
             .counter{font-size:1.6rem;}
-            .wa-btn{width:100%;justify-content:center;}
+            .open-any{width:100%;justify-content:center;}
             h1.display-3{font-size:2rem;}
             h2.display-5{font-size:1.5rem;}
         }
@@ -143,7 +146,7 @@
 <div class="privacy-modal" id="privacyModal">
     <div class="privacy-content" id="privacyContent">
         <button class="btn-close position-absolute top-0 end-0 m-3" id="closePrivacyBtn" aria-label="Close"></button>
-        <h2 class="h4 fw-bold mb-3" style="color:var(--primary);">Privacy Policy</h2>
+        <h2 class="h4 fw-bold mb-3" style="color:var(--wa-green);">Privacy Policy</h2>
         <div style="font-size:0.9rem;line-height:1.6;">
             <p><strong>Information We Collect:</strong> Name, phone, email you provide via WhatsApp or forms.</p>
             <p><strong>How We Use It:</strong> Only to share course info, support, updates. Never sold.</p>
@@ -170,7 +173,7 @@
     <div class="container">
         <div class="row g-4 align-items-center">
             <div class="col-lg-6">
-                <div class="wa-btn glow-pulse mb-3 d-inline-block">👇 See My Journey 👇</div>
+                <div class="open-any glow-pulse mb-3 d-inline-block">👇 See My Journey 👇</div>
                 <!-- FULL-SIZE IMAGE (no black bars) -->
                 <div class="rounded-3 overflow-hidden shadow-lg">
                     <img src="https://i.ibb.co/8QJtktT/neisha-shaikh.jpg" class="w-100" alt="Neiha Journey" loading="lazy">
@@ -185,10 +188,10 @@
                     <p class="fs-5 d-flex align-items-center gap-2">🎯 Online-Skills Coach</p>
                 </div>
                 <div class="p-3 rounded-2 mb-3 glow-border" style="background: var(--white);">
-                    <h3 class="h5 fw-bold mb-2" style="color:var(--primary);">🎯 My Vision:</h3>
+                    <h3 class="h5 fw-bold mb-2" style="color:var(--wa-green);">🎯 My Vision:</h3>
                     <p class="fs-5 fw-semibold mb-0">"Empower Women to Empower Themselves"</p>
                 </div>
-                <button class="wa-btn mb-4 open-any shine-effect">📲 Connect on WhatsApp</button>
+                <button class="open-any mb-4 shine-effect">📲 Connect on WhatsApp</button>
                 <div class="row g-3">
                     <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="5" data-suffix="+">0</div><p>Years of Experience</p></div></div>
                     <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="2000" data-suffix="+">0</div><p>Women Helped</p></div></div>
@@ -202,7 +205,7 @@
 <!-- ===== REEL-SIZE + ON-PAGE FULL-SCREEN PLAY ===== -->
 <section class="py-5" style="background: var(--white);">
     <div class="container">
-        <h2 class="text-center display-5 fw-bold mb-3" style="color:var(--primary);">✨ Neiha Shaikh mentorship results</h2>
+        <h2 class="text-center display-5 fw-bold mb-3" style="color:var(--primary);">✨ Real Success Stories</h2>
         <p class="text-center text-muted mb-4">100% real feedback from women in our community</p>
         <div class="reel-track">
             <!-- 5 YouTube Shorts – click → full-screen on page -->
@@ -275,7 +278,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center mt-5"><button class="wa-btn open-any shine-effect">📲 Get Started Now</button></div>
+        <div class="text-center mt-5"><button class="open-any shine-effect">📲 Get Started Now</button></div>
     </div>
 </section>
 
@@ -346,15 +349,15 @@
         <h2 class="display-4 fw-bold mb-3">Ready to Transform Your Life?</h2>
         <p class="fs-5 mb-4">Join thousands of women on their journey to financial independence</p>
         <div class="card border-0 p-4 p-md-5 mb-4" style="background:var(--white);color:var(--darkest);">
-            <h3 class="h4 fw-bold mb-3" style="color:var(--primary);">📲 How to Start?</h3>
+            <h3 class="h4 fw-bold mb-3" style="color:var(--wa-green);">📲 How to Start?</h3>
             <p class="fs-5 mb-3">Simply message me on WhatsApp:</p>
             <div class="row g-2 mb-3">
                 <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>📝 Name:</strong> Full Name</div></div>
                 <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>🎂 Age:</strong> Your Age</div></div>
                 <div class="col-md-4"><div class="glow-border text-dark p-3 rounded" style="background:var(--lightest);"><strong>💼 Profession:</strong> Current Status</div></div>
             </div>
-            <p class="fs-6 fw-semibold mb-3" style="color:var(--primary);">📌 Save My Number: 8856846126</p>
-            <button class="wa-btn open-any glow-pulse" style="background:var(--white);color:var(--primary);border:1px solid var(--primary);">📲 Message on WhatsApp Now</button>
+            <p class="fs-6 fw-semibold mb-3" style="color:var(--wa-green);">📌 Save My Number: 8856846126</p>
+            <button class="open-any glow-pulse" style="background:var(--white);color:var(--wa-green);border:1px solid var(--wa-green);">📲 Message on WhatsApp Now</button>
             <div class="text-center mt-4">
                 <a href="https://www.instagram.com/successneha2024/?igsh=Zms5dHk4NjNjZXM4#==" target="_blank" class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2"><i data-lucide="instagram" width="24"></i>Follow on Instagram</a>
             </div>
@@ -379,7 +382,7 @@
         <div class="card-body p-4 position-relative">
             <button id="closeFormBtn" class="btn-close position-absolute top-0 end-0 m-3" aria-label="Close"></button>
             <div class="text-center mb-4">
-                <h2 class="h4 fw-bold mb-1" style="color:var(--primary);">🚀 Start Your Journey</h2>
+                <h2 class="h4 fw-bold mb-1" style="color:var(--wa-green);">🚀 Start Your Journey</h2>
                 <p class="text-muted small">Fill details to get started</p>
             </div>
             <form id="mainForm" novalidate>
@@ -435,7 +438,7 @@
                     </div>
 
                     <div class="col-12">
-                        <button type="submit" class="wa-btn w-100">📲 Send to WhatsApp</button>
+                        <button type="submit" class="open-any w-100">📲 Send to WhatsApp</button>
                     </div>
                 </div>
             </form>
@@ -478,7 +481,7 @@
     const privacyModal=document.getElementById('privacyModal');
     const privacyBtn=document.getElementById('privacyBtn');
     const closePrivacyBtn=document.getElementById('closePrivacyBtn');
-    const SCRIPT_URL="https://script.google.com/macros/s/AKfycbwLjyEL-2YSr9PhzgLQHE7lQgt0embKLP5pLZgtiT1wJIE7Vsnu1TcAI4kwWTusyD3-fA/exec";
+    const SCRIPT_URL="https://script.google.com/macros/s/AKfycbyc8_Cc-0Do-CiJ4rePqcDh8VR4x3Co05yWGR4gZYfzFMoATFCM2G_GbLJXK6rRsMHg2w/exec";
     const WA_NUMBER_INT="918856846126";
 
     function openForm(source='site'){
